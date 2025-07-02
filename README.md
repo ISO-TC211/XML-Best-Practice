@@ -7,8 +7,8 @@ Schemas that ISO\/TC 211 promote are of two types, those that provide metadata a
 In the past ISO\/TC 211 has focused predominantly on the former, with the range of ISO 19115 metadata standards.
 ## Namespaces and their corresponding prefixes
 For convenience, _namespace prefix_ will be some times be 'nsp'.<br/>
-A nameSpace should be a URI for the concepts being defined by the classes and thier attributes.<br/>
-For the majority of ISO\/TC&nbsp;211 XML implementations the name space URI looks like a URL but need not be resolvable. The URIs generally reflect the URL where the XML schemas are located, but truncated after the major revision number. An example of this would, for the yet to be developed, ISO&nbsp;19115-1&nbsp;Edition&nbsp;2 standard - Identifcation (nsp='mri'):<br/>
+A namespace should be a URI for the concepts being defined by the classes and thier attributes.<br/>
+For the majority of ISO\/TC&nbsp;211 XML implementations the namespace URI looks like a URL but need not be resolvable. The URIs generally reflect the URL where the XML schemas are located, but truncated after the major revision number. An example of this would, for the yet to be developed, ISO&nbsp;19115-1&nbsp;Edition&nbsp;2 standard - Identifcation (nsp='mri'):<br/>
 URI https:\/\/schemas.isotc211.org\/xml\/19115\/-1\/2\/mri\/1; and<br/>
 URL https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd.<br/>
 Except where the name space has been adopted from a different domain (eg OGC) the nameSpace URI takes the form of:<br/>
