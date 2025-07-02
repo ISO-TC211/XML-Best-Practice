@@ -14,7 +14,8 @@ URL https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd.<br/>
 Except where the nameSpace has been adopted from a different domain (eg OGC) the nameSpace URI takes the form of:<br/>
 _https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>_; and<br/>
 schema location takes the form of:<br/>
-_https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>.\<minorRevisionNumber\>\/\<fileName\>_
+_https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>.\<minorRevisionNumber\>\/\<fileName\>_<br/>
+This pattern allows nameSpace URI to be maintained through minor revisions and patches, but change when major revisions occur. Using the model developed by <a href="https://semver.org/">Semantic Versioning 2.0.0.
 ## Structures used in metadata type schemas
 ISO/TC 211 metadata type schemas represent each class in thge UML with three components: an introduction to the class as <complexType name="ClassName_PropertyType">; the class iytself as <element name="ClassName" type="nsp:ClassName_Type">; and the attributes of the class as <complexType name="ClassName_Type">
 
