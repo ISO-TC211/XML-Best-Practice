@@ -12,7 +12,7 @@ For the majority of ISO/TC 211 XML implementations the nameSpace URI looks like 
 URI https:\/\/schemas.isotc211.org\/xml\/19115\/-1\/2\/mri\/1; and<br/>
 URL https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd.<br/>
 Except where the nameSpace has been adopted from a different domain (eg OGC) the nameSpace URI takes the form of:<br/>
-_https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>_; and
+_https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>_; and<br/>
 schema location takes the form of:<br/>
 _https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>.\<minorRevisionNumber\>\/\<fileName\>_
 ## Structures used in metadata type schemas
