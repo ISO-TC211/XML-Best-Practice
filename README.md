@@ -8,7 +8,9 @@ In the past ISO/TC 211 has focused predominantly on the former, with the range o
 ## Name spaces and their corresponding prefixes
 For convenience, _name spaces_ will be expressed as 'nameSpace', and the associated _prefix_ as 'nsp'.<br/>
 A nameSpace should be a URI for the concepts being defined by the classes and thier attributes.<br/>
-For the majority of ISO/TC 211 XML implementations the nameSpace URI looks like a URL but need not be resolvable. The URIs generally reflect the URL where the XML schemas are located, but truncated after the major revision number. An example of this would, for the yet to be developed, ISO 19115-1 Edition 2 standard - Identifcation (nsp='mri') : URI https:\/\/schemas.isotc211.org\/xml\/19115\/-1\/2\/mri\/1; and URL https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd.<br/>
+For the majority of ISO/TC 211 XML implementations the nameSpace URI looks like a URL but need not be resolvable. The URIs generally reflect the URL where the XML schemas are located, but truncated after the major revision number. An example of this would, for the yet to be developed, ISO 19115-1 Edition 2 standard - Identifcation (nsp='mri'):<br/>
+URI https:\/\/schemas.isotc211.org\/xml\/19115\/-1\/2\/mri\/1; and<br/>
+URL https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd.<br/>
 Except where the nameSpace has been adopted from a different domain (eg OGC) the nameSpace URI takes the form of:<br/>
 _https:\/\/schemas.isotc211.org\/\<format\>\/\<standardNumber\>\/-\<partNumber\>\/\<EditionNumber\>\/\<nsp\>\/\<majorRevionNumber\>_; and
 schema location takes the form of:<br/>
