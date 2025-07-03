@@ -7,6 +7,7 @@ Note:
 - XML is case sensitive but, except when entering values within tags, white-space agnostic.
 - The implementation model will be slightly different from the conceptual model defined in the standard.
 - Unlike UML, XML classes can only inherit (substitutionGroup) from one class, where inheritance from more than one class is required, the attributes and roles from subsequent classes need to be instantiated in their own right within the specialized class.<br/>
+<br/>
 Schemas that ISO\/TC 211 promote are of two types, those that provide metadata about a set of data, and those that provide the data itself, and all conform to 'http://www.w3.org/2001/XMLSchema'.<br/>
 In the past ISO\/TC 211 has focused predominantly on the former, with the range of ISO 19115 metadata standards.
 ## Namespaces and their corresponding prefixes
