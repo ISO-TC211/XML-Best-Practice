@@ -4,9 +4,9 @@ _ISO\/TC&nbsp;211 standards are model driven, being based on the UML model that 
 The XML implementations of those standards attempt to reproduce those models as schemas._<br/>
 XML (eXtensible Markup Lanuage) provides a mechanism to transfer information and data in a structured way. The use of XML schemas further enhaces that tranfer by ensuring that the records that conform to that schema will tranfer the data in the order that the schema specifies and contains only the allowable values and always the mandatory ones. XML is very samble and is capable of transfering large pay-loads and dealing with very complex schemas.<br/>
 Note: <br/>
-. XML is case sensitive but, except when entering values within tags, white-space agnostic.<br/>
-. The implementation model will be slightly different from the conceptual model defined in the standard.<br/>
-. Unlike UML, XML classes can only inherit (substitutionGroup) from one class, where inheritance from more than one class is required, the attributes and roles from subsequent classes need to be instantiated in their own right within the specialized class.<br/>
+* XML is case sensitive but, except when entering values within tags, white-space agnostic.<br/>
+* The implementation model will be slightly different from the conceptual model defined in the standard.<br/>
+* Unlike UML, XML classes can only inherit (substitutionGroup) from one class, where inheritance from more than one class is required, the attributes and roles from subsequent classes need to be instantiated in their own right within the specialized class.<br/>
 Schemas that ISO\/TC 211 promote are of two types, those that provide metadata about a set of data, and those that provide the data itself, and all conform to 'http://www.w3.org/2001/XMLSchema'.<br/>
 In the past ISO\/TC 211 has focused predominantly on the former, with the range of ISO 19115 metadata standards.
 ## Namespaces and their corresponding prefixes
