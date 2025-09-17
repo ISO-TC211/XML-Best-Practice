@@ -5,7 +5,7 @@ Work on best practice for XML schemas, validation and example for ISO/TC&nbsp;21
 > [!IMPORTANT]
 > ISO/TC&nbsp;211 standards are model driven, being based on the UML model that defines packages, classes and attributes. The XML implementations of those standards attempt to reproduce those models as schemas.
 
-XML (eXtensible Markup Language) provides a mechanism to transfer information and data in a structured way. The use of XML schemas further enhances that transfer by ensuring that the records that conform to that schema (1) will transfer the data in the order that the schema specifies and (2) contain only the allowable values and always the mandatory ones. XML is very samble and is capable of transfering large pay-loads and dealing with very complex schemas.
+XML (eXtensible Markup Language) provides a mechanism to transfer information and data in a structured way. The use of XML schemas further enhances that transfer by ensuring that the records that conform to that schema: 1) will transfer the data in the order that the schema specifies; and 2) contain only the allowable values and always the mandatory ones. XML is very samble and is capable of transfering large pay-loads and dealing with very complex schemas.
 
 Note:
 - XML is case sensitive but, except when entering values within tags, white-space agnostic.
@@ -27,7 +27,7 @@ For the majority of ISO/TC&nbsp;211 XML implementations the namespace URI looks 
 - URI: `https://schemas.isotc211.org/xml/19115/-1/2/mri/1`
 - URL: `https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd`
 
-Except where the namespace has been adopted from a different domain (eg OGC), the namespace URI takes the form of:
+Except where the namespace has been adopted from a different domain (eg OGC) the namespace URI takes the form of:
 
 - URI: `https://schemas.isotc211.org/<format>/<standardNumber>/-<partNumber>/<EditionNumber>/<nsp>/<majorRevionNumber>`
 - URL: `https://schemas.isotc211.org/<format>/<standardNumber>/-<partNumber>/<EditionNumber>/<nsp>/<majorRevionNumber>.<minorRevisionNumber>/<fileName>`
@@ -48,7 +48,7 @@ ISO/TC&nbsp;211 has a policy that all published valid schemas will be retained f
 
 Using a modified construct as defined in [Semantic Versioning 2.0.0](https://semver.org/), ISO/TC&nbsp;211 increments the major version number in both the namespace URIs and schema URLs when a change is made to a valid XML schema that is not backward compatible.
 
-For minor changes, where the revised schema is backward compatable with the pre-existing valid schema, the schema URL minor version number is incremented but the namespace URI is maintained.
+For minor changes, where the revised schema is backward compatible with the pre-existing valid schema, the schema URL minor version number is incremented but the namespace URI is maintained.
 
 For patches and error corrections, the revision numbers do not change, but any changes that have been made are noted within the schema file as comments, explaining why a change has been made and what the content had been before the change.
 
@@ -74,17 +74,17 @@ The ElementType reflects the UML attributes and roles (element) associated with 
 
 The XML attributes that the `<xs:element>` must carry include `name="element"` or `ref="nsp:Element"`. In addition XML attributes `minOccurs="<Integer>"` and `maxOccurs="<Integer>"` where `<Integer>` should be provided to match the cardinality from the _Harmonized Model. The value provided in the XML attribute `type="nsp:Element_PropertyType"` must be either a `<xs:simpleType>` or `<xs:complexType>`.
 
-If an Element is purely an implementation of a GeneralizedElement then the ElementType will be an `<extension base="nsp:GeneralizedElement_Type"\>` with a empty `<sequence />`.
+If an Element is purely an implementation of a GeneralizedElement then the ElementType will be an `<extension base="nsp:GeneralizedElement_Type">` with a empty `<sequence>`.
 
-An ElementType may also contain a `<any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other" />` but this needs to be used with extreme care as it is very likely that differing implementations will provide inconsistent responses to `<any>`. 
+An ElementType may also contain a `<any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>` but this needs to be used with extreme care as it is very likely that differing implementations will provide inconsistent responses to `<any>`. 
 
 ## Structures used in data type schemas
 
 Unlike the metadata type schemas, ISO/TC&nbsp;211 data type schemas are simpler, using nested complexTypes, and W3C types directly for element values. These factors reduce the need to carry as many tags in the resultant XML record.
 
-Although the data type schemas could use the `<complexType name="ClassName_PropertyType">`, they usually have `<element name="ClassName" type="ClassNameType>` followed by `<complexType name="ClassName_Type>` where the `<sequence>` contains: `<element name="element" type="<simpleType>"` or `<element ref="<nsp:ClassName>"`. The resultant XML record is then a set of tags for the ClassName containing tags for either other ClassNames, or elements with values. Similarly, where the `<sequence>` contains `<element name="element" type="<ClassName_Type>`, the resultant XML record is then a set of tags for the ClassName containing tags for elements in the referenced class. These options allow for greated compression in the XML data record by bypassing the UML role xor ClassName to avoid the extra XML tags.
+Although the data type schemas could use the `<complexType name="ClassName_PropertyType">`, they usually have `<element name="ClassName" type="ClassNameType>` followed by `<complexType name="ClassName_Type>` where the `<sequence>` contains: `<element name="element" type="<simpleType>"` or `<element ref="<nsp:ClassName>"`. The resultant XML record is then a set of tags for the ClassName containing tags for either other ClassNames, or elements with values. Similarly, where the `<sequence>` contains `<element name="element" type="<ClassName_Type>`, the resultant XML record is then a set of tags for the ClassName containing tags for elements in the referenced class. These options allow for greater compression in the XML data record by bypassing the UML role xor ClassName to avoid the extra XML tags.
 
-Similar to metadata type schemas, data type scemas may also contain a `<any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other" />` but this needs to be used with extreme care as it is very likely that differing implementations will provide inconsistent responses to `<any>`.
+Similar to metadata type schemas, data type scemas may also contain a `<any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>` but this needs to be used with extreme care as it is very likely that differing implementations will provide inconsistent responses to `<any>`.
 
 ## Introduction of ISO&nbsp;19103:2024
 
