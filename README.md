@@ -22,10 +22,8 @@ For convenience, _namespace prefix_ will be some times be 'nsp'.
 
 A namespace should be a URI for the concepts being defined by the classes and their attributes.
 
-For the majority of ISO/TC&nbsp;211 XML implementations the namespace URI looks like a URL but need not be resolvable. The URIs generally reflect the URL where the XML schemas are located, but truncated after the major revision number. An example of this would, for the yet to be developed, ISO&nbsp;19115-1&nbsp;Edition&nbsp;2 standard - Identification (nsp='mri'):
-
-- URI: `https://schemas.isotc211.org/xml/19115/-1/2/mri/1`
-- URL: `https://schemas.isotc211.org/xml/19115/-1/2/mri/1.0/identification.xsd`
+For the majority of ISO/TC&nbsp;211 XML implementations the namespace URI looks like a URL but need not be resolvable. 
+- See detail: `https://committee.iso.org/sites/tc211/home/resolutions/isotc-211-good-practices/--structure-of-uris-in-isotc-211.html`
 
 Except where the namespace has been adopted from a different domain (eg OGC) the namespace URI takes the form of:
 
@@ -84,7 +82,7 @@ Unlike the metadata type schemas, ISO/TC&nbsp;211 data type schemas are simpler,
 
 Although the data type schemas could use the `<complexType name="ClassName_PropertyType">`, they usually have `<element name="ClassName" type="ClassNameType>` followed by `<complexType name="ClassName_Type>` where the `<sequence>` contains: `<element name="element" type="<simpleType>"` or `<element ref="<nsp:ClassName>"`. The resultant XML record is then a set of tags for the ClassName containing tags for either other ClassNames, or elements with values. Similarly, where the `<sequence>` contains `<element name="element" type="<ClassName_Type>`, the resultant XML record is then a set of tags for the ClassName containing tags for elements in the referenced class. These options allow for greater compression in the XML data record by bypassing the UML role xor ClassName to avoid the extra XML tags.
 
-Similar to metadata type schemas, data type scemas may also contain a `<any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>` but this needs to be used with extreme care as it is very likely that differing implementations will provide inconsistent responses to `<any>`.
+Similar to metadata type schemas, data type schemas may also contain a `<any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>` but this needs to be used with extreme care as it is very likely that differing implementations will provide inconsistent responses to `<any>`.
 
 ## Introduction of ISO&nbsp;19103:2024
 
